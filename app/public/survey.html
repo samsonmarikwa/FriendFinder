@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Friend Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!-- jQuery link -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+
+            <img src="assets/imgs/People.jpg" width="20%" height="90%">
+            <div class="jumbo-hdr">
+                <p>Friend Finder!</p>
+                <hr>
+                <h4>Answer a few basic questions about yourself.</h4>
+                <h6>Then you are on your way to find a friend with the greatest compatibility!</h6>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                <!-- Survey questions -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Survey Questions</h2>
+                        <hr>
+                    </div>
+                    <div class="panel-body">
+
+                        <form role="form">
+                            <h4>About You</h4>
+
+                            <div class="form-group">
+                                <label for="person-name">Name (Required)</label>
+                                <input type="text" class="form-control" id="person-name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="photo-link">Link to Photo Image (Required)</label>
+                                <input type="text" class="form-control" id="photo-link">
+                            </div>
+                            <hr>
+
+                            <h4>Question 1</h4>
+                            <p>Your mood can change very quickly.</p>
+                            <div class="form-group">
+                                <label for="mood"></label>
+                                <select id="mood">
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="1">1 (Strongly Agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Disagree)</option>
+                                </select>
+                            </div>
+
+                            <h4>Question 2</h4>
+                            <p>You often get so lost in thoughts that you ignore or forget your surroundings.</p>
+                            <div class="form-group">
+                                <label for="lost-in-thought"></label>
+                                <select id="lost-in-thought">
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="1">1 (Strongly Agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Disagree)</option>
+                                </select>
+                            </div>
+
+                            <h4>Question 3</h4>
+                            <p>You find it easy to stay relaxed even when there is some pressure.</p>
+                            <div class="form-group">
+                                <label for="pressure-handling"></label>
+                                <select id="pressure-handling">
+                                    <option value="" disabled selected>Select your option</option>                                    
+                                    <option value="1">1 (Strongly Agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Disagree)</option>
+                                </select>
+                            </div>
+
+                            <h4>Question 4</h4>
+                            <p>If your friend is sad about something, you are more likely to offer emotional support than suggest ways to deal with the problem.</p>
+                            <div class="form-group">
+                                <label for="support"></label>
+                                <select id="support">
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="1">1 (Strongly Agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Disagree)</option>
+                                </select>
+                            </div>
+
+                            <h4>Question 5</h4>
+                            <p>It is often difficult for you to relate to other people’s feelings.</p>
+                            <div class="form-group">
+                                <label for="feelings"></label>
+                                <select id="feelings">
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="1">1 (Strongly Agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Disagree)</option>
+                                </select>
+                            </div>
+
+                            <h4>Question 6</h4>
+                            <p>In a discussion, truth should be more important than people’s sensitivities.</p>
+                            <div class="form-group">
+                                <label for="truth"></label>
+                                <select id="truth">
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="1">1 (Strongly Agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Disagree)</option>
+                                </select>
+                            </div>
+
+                            <h4>Question 7</h4>
+                            <p>You are usually highly motivated and energetic.</p>
+                            <div class="form-group">
+                                <label for="motivated"></label>
+                                <select id="motivated">
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="1">1 (Strongly Agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Disagree)</option>
+                                </select>
+                            </div>
+
+                            <h4>Question 8</h4>
+                            <p>Winning a debate matters less to you than making sure no one gets upset.</p>
+                            <div class="form-group">
+                                <label for="winning"></label>
+                                <select id="winning">
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="1">1 (Strongly Agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Disagree)</option>
+                                </select>
+                            </div>
+
+                            <h4>Question 9</h4>
+                            <p>You often feel as if you have to justify yourself to other people.</p>
+                            <div class="form-group">
+                                <label for="justification"></label>
+                                <select id="justification">
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="1">1 (Strongly Agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Disagree)</option>
+                                </select>
+                            </div>
+
+                            <h4>Question 10</h4>
+                            <p>People can rarely upset you.</p>
+                            <div class="form-group">
+                                <label for="upset"></label>
+                                <select id="upset">
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="1">1 (Strongly Agree)</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5 (Strongly Disagree)</option>
+                                </select>
+                            </div>
+
+                            <hr>
+
+                            <button type="submit" class="btn button submit">Submit</button>
+
+                            <a href="/" class="btn button"><i class="fa fa-home"></i>Home</a>
+                        </form>
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="foot">
+            <a href="/api/friends">API Friends List</a><span> | </span>
+            <a href="https://github.com/samsonmarikwa/FriendFinder">GitHub Repo</a>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
+
+<!-- The code below handles how form data is sent to our server. -->
+<script type="text/javascript">
+    /*
+     * This code is the front-end JavaScript which "POSTS" our form data to our express server.
+     * When the user hits submit, jQuery grabs all of the fields then sends a post request to our api.
+     * Our api which is running in server.js recognizes the route (/api/friends)... and then runs the
+     * associated code (found in api-routes.js).
+     */
+
+    $(".submit").on("click", (event) => {
+        event.preventDefault();
+
+        // Grab form data and populate the newSurvey object with name and photo link and create empty
+        // scores array
+        var newSurvey = {
+            personName: $("#person-name").val().trim(),
+            photoLink: $("#photo-link").val().trim(),
+            scores: []
+        };
+
+        // populate scores array with form data select options
+        newSurvey.scores.push(parseInt($("#mood option:selected").val().trim()))
+        newSurvey.scores.push(parseInt($("#lost-in-thought option:selected").val().trim()))
+        newSurvey.scores.push(parseInt($("#pressure-handling option:selected").val().trim()))
+        newSurvey.scores.push(parseInt($("#support option:selected").val().trim()))
+        newSurvey.scores.push(parseInt($("#feelings option:selected").val().trim()))
+        newSurvey.scores.push(parseInt($("#truth option:selected").val().trim()))
+        newSurvey.scores.push(parseInt($("#motivated option:selected").val().trim()))
+        newSurvey.scores.push(parseInt($("#winning option:selected").val().trim()))
+        newSurvey.scores.push(parseInt($("#justification option:selected").val().trim()))
+        newSurvey.scores.push(parseInt($("#upset option:selected").val().trim()))
+
+        /*
+         * The AJAX post will send the object to the server and then the callback handles the response
+         * we get from the server. The route-handler is in apiRoute.js and this runs within server.js.
+         * The route handler will return data to the browser and then the callback displays the picture
+         * and name of the matched person.
+         */
+        $.post("/api/friends", newSurvey, (data) => {
+
+            // If there is a match, display the photo of the matched person.
+            if (data.matched) {
+                var htmlTxt = "<img src= '" + data.photoSrc + "' height=100% width=100%>";
+
+                newSurveyDialog("You have been matched to " + data.name, htmlTxt);
+            } else {
+                // no match found
+
+                newSurveyDialog("No Match Found", "<p>You will be advised if a new registrant is matched with you</p> ")
+            }
+
+            // Clear the form when submitting
+            //assign a null value to clear
+            $("#person-name").val("");
+            $("#photo-link").val("");
+            $("#mood").val("");
+            $("#lost-in-thought").val("");
+            $("#pressure-handling").val("");
+            $("#support").val("");
+
+            // select options can be cleared using .prop('selectedIndex', 0)
+            $("#feelings").prop('selectedIndex', 0);
+            $("#truth").prop('selectedIndex', 0);
+            $("#motivated").prop('selectedIndex', 0);
+            $("#winning").prop('selectedIndex', 0);
+            $("#justification").prop('selectedIndex', 0);
+            $("#upset").prop('selectedIndex', 0);
+        });
+
+        /*
+         * Function displays a jQuery ui dialog box.
+         * This displays a picture of the selected person and name
+         */
+        var newSurveyDialog = (title, text) => {
+            var div = $('<div>').html(text).dialog({
+                title: title,
+                modal: true,
+                hide: "puff",
+                show: "slide",
+                height: "auto",
+                width: "auto"
+            })
+        }
+    });
+</script>
